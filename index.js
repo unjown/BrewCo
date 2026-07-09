@@ -16,11 +16,18 @@ window.onload = function() {
   const currentDay = currentTime.getDay(); 
   if (currentHour >= 13 && currentHour < 20) {
       openStatus.textContent = "Open now";
+    
   } else if(currentHour >= 20 && currentHour < 22) {
       openStatus.textContent = "Closing Soon";
+      openStatus.style.backgroundColor = "#C9824A";
+      openStatus.style.color = "#F5F0E8";
+     
   } else if(currentHour >= 11 && currentHour < 13) {
       openStatus.textContent = "Opening Soon";
+      openStatus.style.backgroundColor = "#E6C88A";
   }
     else {
       openStatus.textContent = "Closed now :(";
+      openStatus.style.backgroundColor = "var(--coffee)";
+      openStatus.style.color = "#F5F0E8";
   }}

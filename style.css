@@ -1,11 +1,11 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
   :root{
-    --black:#121212;
+    --black:#202020;
     --ink:#1A1A1A;
     --off-white:#F5F0E8;
     --paper:#EAE3D6;
-    --hover:#E9E0D3;
+    --hover:#DCC8B6;
     --muted:#8A8A8A;
     --line-dark: rgba(245,240,232,0.14);
     --line-light: rgba(18,18,18,0.12);
@@ -16,6 +16,7 @@
     --milk: #ffffff;
     --coffee: #6F4E37;
     --cup-border: #0d0c0a;
+    --dark-black: rgba(18,18,18,0.9) ;
   }
   a{
      text-decoration:none; 
@@ -43,7 +44,7 @@
 
   /* ---------- NAV ---------- */
   .navbar-brew{
-    background:rgba(18,18,18,0.9) ;
+    background:var(--dark-black);
     backdrop-filter:blur(8px);
     border-bottom:1px solid var(--line-dark);
     padding-left: 1rem;
@@ -63,8 +64,11 @@
   .btn-outline-cream:hover{ 
     background:var(--hover ); color:var(--black);}
 .navbar-toggler{
-    border-color:var(--line-dark); 
+    border-color:none; 
     color:var(--off-white);
+}
+.navbar-toggler{
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath stroke='rgba(245,240,232,0.9)' stroke-width='2.5' stroke-linecap='round' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 #btn-CTA, #btn-SCTA{
     border-radius: 5%;
@@ -74,6 +78,15 @@
     #btn-SCTA{
         width: 100%;
     }
+}
+.hero-details{
+    display:flex; align-items:center; gap:1rem; margin-top:1.5rem;
+}
+.hero-details-text{
+    color:var(--off-white); font-family:'JetBrains Mono', monospace; font-size:14px; letter-spacing:0.05em; opacity:0.7; margin-right:.7rem;
+}
+.hero-details svg{
+    margin-right:0rem
 }
   /* ---------- HERO ---------- */
   .hero-section{ padding:1rem 1rem 4rem 1rem ; border-bottom:1px solid var(--line-dark); }
@@ -101,19 +114,31 @@
 
 
   /* ---------- LOCATIONS ---------- */
-  .locations-section{ border-top:1px solid var(--line-dark); border-bottom:1px solid var(--line-dark); padding:80px 0;  }
-  .loc-card{ padding:2.25rem 1.875rem; border:1px solid var(--line-dark); height:100%; border-radius:5%; }
-  .loc-card .tag{ font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--muted); letter-spacing:0.06em; margin-bottom:14px; }
-  .loc-card h4{ font-family:'Fraunces', serif; font-size:22px; font-weight:500; margin-bottom:10px; }
-  .loc-card p{ font-size:13.5px; color:var(--muted); margin-bottom:0; }
-  .loc-card:hover{ border-color:var(--off-white); }
+  .locations-section{ border-top:1px solid var(--line-dark); border-bottom:1px solid var(--line-dark); padding:80px 0; background:var(--black); color:var(--off-white); }
+  .loc-card{ padding:2.25rem 1.875rem; border:1px solid var(--line-dark); height:100%; border-radius:5%; background:var(--paper); transition:border-color .3s ease; }
+  .loc-card .tag{ font-family:'JetBrains Mono', monospace; font-size:12px; color:#8A8A8A; letter-spacing:0.06em; margin-bottom:14px; }
+  .loc-card h4{ font-family:'Fraunces', serif; font-size:22px; font-weight:500; margin-bottom:10px; color:#1A1A1A; }
+  .loc-card p{ font-size:13.5px; color:var(--muted); margin-bottom:0; color: #5E564D}
+  .loc-card:hover{
+    background: var(--coffee);
+    border-color: var(--off-white);
+}
 
-  /* ---------- VISIT ---------- */
-  .visit-section{ padding:110px 0 80px; }
-  .table-hours td{ padding:.75rem 0; border-top:1px solid var(--line-dark); font-size:14px; color:var(--off-white); background:transparent; }
-  .table-hours td:last-child{ text-align:right; font-family:'JetBrains Mono', monospace; color:var(--muted); }
+    .loc-card:hover .tag{
+    color: #D6C7B8;
+}
 
-  footer.site-footer{ border-top:1px solid var(--line-dark); padding:1.75rem 0; font-size:12px; color:var(--muted); }
+    .loc-card:hover h4{
+    color: var(--off-white);
+}
+
+    .loc-card:hover p{
+    color: #EFE5DA;
+}
+  
+
+  /*Footer*/
+footer.site-footer{ border-top:1px solid var(--line-dark); padding:1.75rem 0; font-size:12px; color:var(--muted); background:var(--dark-black); }
 
 /* Coffee CSS */
 .coffee-wrapper{
@@ -141,8 +166,12 @@
 @media (max-width:576px){
     .coffee-cup{
         margin:.5rem 0;
-    } }
+    } 
+    .coffee-wrapper{
+        border-bottom:1px solid var(--muted); padding-bottom:1rem; margin-bottom:1rem;opacity:0.7;
+    }}
 /* Coffee Fill */
+
 .coffee{
     position:absolute;
     bottom:0;
