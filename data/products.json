@@ -1,0 +1,134 @@
+[
+  {
+    "category": "Espresso",
+    "items": [
+      {
+        "id": 1,
+        "name": "Espresso",
+        "description": "Double shot, our current house blend",
+        "price": 120,
+        "image": "image1.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Spanish Latte",
+        "description": "Espresso, condensed milk, steamed milk",
+        "price": 150,
+        "image": "image1.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Brew & Co. Signature",
+        "description": "Double shot, brown sugar, oat milk",
+        "price": 165,
+        "image": "image1.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Iced Americano",
+        "description": "Slow-poured over hand-cracked ice",
+        "price": 130,
+        "image": "image1.jpg"
+      }
+    ]
+  },
+  {
+    "category": "Matcha",
+    "items": [
+      {
+        "id": 5,
+        "name": "Matcha Latte",
+        "description": "Matcha, Heavy Cream, and Milk",
+        "price": 200,
+        "image": "image1.jpg"
+      },
+      {
+        "id": 6,
+        "name": "Uji Matcha",
+        "description": "Uji Matcha and Milk",
+        "price": 250,
+        "image": "image1.jpg"
+      },
+      {
+        "id": 7,
+        "name": "Salted Cream Matcha",
+        "description": "Matcha, Milk, and Salted Cream",
+        "price": 220,
+        "image": "image1.jpg"
+      },
+      {
+        "id": 8,
+        "name": "Strawberry Matcha",
+        "description": "Strawberry Preserve, Matcha, Milk",
+        "price": 220,
+        "image": "image1.jpg"
+      }
+    ]
+  },
+  {
+    "category": "Non-Coffee",
+    "items": [
+      {
+        "id": 9,
+        "name": "Milky Vanilla",
+        "description": "Milk and Vanilla Syrup",
+        "price": 195,
+        "image": "image1.jpg"
+      },
+      {
+        "id": 10,
+        "name": "Milky Strawberry",
+        "description": "Milk and Strawberry Preserve",
+        "price": 200,
+        "image": "image1.jpg"
+      },
+      {
+        "id": 11,
+        "name": "Milky Chocolate",
+        "description": "Milk and Chocolate",
+        "price": 200,
+        "image": "image1.jpg"
+      },
+      {
+        "id": 12,
+        "name": "Strawberry Chocolate",
+        "description": "Strawberry Preserve, Chocolate, Milk",
+        "price": 225,
+        "image": "image1.jpg"
+      }
+    ]
+  },
+  {
+    "category": "Frappes",
+    "items": [
+      {
+        "id": 13,
+        "name": "Java Chip",
+        "description": "Espresso, Mocha Syrup, Chocolate Chips",
+        "price": 200,
+        "image": "image1.jpg"
+      },
+      {
+        "id": 14,
+        "name": "Choco Caramel Brownie",
+        "description": "Chocolate Syrup, Brownie Crumbs, Milk",
+        "price": 220,
+        "image": "image1.jpg"
+      },
+      {
+        "id": 15,
+        "name": "Espresso Frappe",
+        "description": "Espresso, Milk",
+        "price": 220,
+        "image": "image1.jpg"
+      },
+      {
+        "id": 16,
+        "name": "Biscoff",
+        "description": "Biscoff Spread, Biscoff Crumbs, Milk",
+        "price": 220,
+        "image": "image1.jpg"
+      }
+    ]
+  }
+]
