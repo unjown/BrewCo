@@ -175,7 +175,7 @@
 #cartItems{
     overflow-y: auto;
     max-height: 40vh;
-    scrollbar-color: rgba(111, 78, 55,.2) transparent;
+    scrollbar-color: rgba(228, 216, 206, 0.2) transparent;
     scrollbar-gutter: stable;
 }
 #cartItems::-webkit-scrollbar-button {
@@ -188,6 +188,7 @@
     align-items:center;
     padding:1rem 0;
     border-bottom:1px solid rgba(18,18,18,.08);
+    overflow-y: auto;
 
 }
 
@@ -233,6 +234,8 @@
 
 }
 /* so it stays same color when clicked on mobile*/
+
+
 /* ===========================
    RESPONSIVE
 =========================== */
@@ -402,7 +405,7 @@
     z-index: 1100;
     box-shadow: 100rem rgba(0,0,0,.8);
     padding: 2rem;
-    overflow-y: auto;
+    align-items: center;
 }
 .thanksCard{
     position: fixed;
@@ -428,5 +431,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    display: none;
+}
+
+.thanks-close{
+    position:absolute;
+    top:1rem;
+    right:1rem;
+    z-index:2;
+    background: transparent;
+    color:var(--off-white);
+}
+#emptyCard{
+    display: none;
+}
+#thanksCard{
+    display: none;
+}
+#confirmCard{
     display: none;
 }

@@ -164,4 +164,5 @@ branchClick = (id) => {
     //console.log(branch.address);
     branchAddress = encodeURIComponent(branch.address);
     document.getElementById("mapIframe").src = `https://www.google.com/maps?q=${branchAddress}&output=embed`;
+    document.querySelector(".map-title").textContent=branch.branch;
   };

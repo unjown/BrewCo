@@ -190,9 +190,19 @@ function renderConfirmCart(){
 
 function checkOut(choice){
     renderCart();
+    const thanksCard = document.getElementById("thanksCard")
+    thanksCard.style.display = "none";  
+    const confirmCard = document.getElementById("confirmCard")
+    confirmCard.style.display = "none";    
+    const emptyCard = document.getElementById("emptyCard")
+    emptyCard.style.display = "none";    
     if (choice == 1 ){
         console.log("c1");
-        displayConfirm();
+        if(cart.length ===0){
+            displayEmpty();
+            return
+        }else{
+        displayConfirm();}
     }else if(choice ==2){
     console.log("c2");
     const confirmCard = document.getElementById("confirmCard")
@@ -202,14 +212,18 @@ function checkOut(choice){
     cart = [];
     saveCart();
     
-    }else{
+    }else if(choice==3){
         console.log("c3");
         const confirmOverlay = document.getElementById("confirmOverlay")
         confirmOverlay.style.display = "none";    
         const thanksCard = document.getElementById("thanksCard")
         thanksCard.style.display = "none";   
+    }else{
+            const confirmOverlay = document.getElementById("confirmOverlay")
+        confirmOverlay.style.display = "none";  
+    const emptyCard = document.getElementById("emptyCard")
+    emptyCard.style.display = "none";    
     }
-    
 }
 
 function scrollToBottom(){
@@ -238,5 +252,11 @@ function displayConfirm(){
 
 
 }
-
+function displayEmpty(){
+const confirmOverlay = document.getElementById("confirmOverlay")
+    confirmOverlay.style.display = "block";
+    const emptyCard = document.getElementById("emptyCard")
+    emptyCard.style.display = "block"; 
+    console.log("sjfighfsg")  
+}
 loadProducts();
