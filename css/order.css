@@ -172,7 +172,7 @@
 /* ===========================
    CART ITEM
 =========================== */
-#cartItems{
+#cartItems, #cartItems2{
     overflow-y: auto;
     max-height: 40vh;
     scrollbar-color: rgba(228, 216, 206, 0.2) transparent;
